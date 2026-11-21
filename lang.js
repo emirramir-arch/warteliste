@@ -15,4 +15,18 @@
   const fromUrl = new URLSearchParams(location.search).get('lang');
   if (langs.includes(fromUrl)) start = fromUrl;
   set(start);
+
+  // Referral code: ?ref=name on this page is passed on to the Tally form links,
+  // so sign-ups can be counted per partner. Only letters, digits, - and _ are kept.
+  let ref = (new URLSearchParams(location.search).get('ref') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 30);
+  try {
+    if (ref) localStorage.setItem('ref', ref); else ref = localStorage.getItem('ref') || '';
+  } catch (e) { /* storage may be blocked */ }
+  if (ref) {
+    document.querySelectorAll('a[href^="https://tally.so/r/"]').forEach(a => {
+      const u = new URL(a.href);
+      u.searchParams.set('ref', ref);
+      a.href = u.toString();
+    });
+  }
 })();
