@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheoriePol – Danke / ممنون</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1b1e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='34' text-anchor='middle' fill='%2319c37d'%3ETP%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../fonts/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site.css?v=4">
+</head>
+<body>
+<div class="top">
+  <div class="brand">TheoriePol</div>
+  <div class="langs"><button lang="fa" data-set="fa">فارسی</button><button lang="de" data-set="de">Deutsch</button><button lang="en" data-set="en">English</button></div>
+</div>
+
+<div data-lang="fa">
+  <section class="hero"><div class="wrap">
+    <h1>ممنون! <span>شما در فهرست انتظار هستید.</span></h1>
+    <p>یک ایمیل تأیید برای‌تان فرستاده شد. لطفاً روی لینک داخل آن بزنید.</p>
+  </div></section>
+  <main><div class="wrap">
+    <div class="invite" hidden>
+      <h2>دوست‌تان هم آزمون تئوری دارد؟</h2>
+      <p>این لینک فقط مال شماست:</p>
+      <div class="link"></div>
+      <div class="btns">
+        <button type="button" class="copy" data-done="کپی شد ✓">کپی لینک</button>
+        <a class="wa" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="tg" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <p class="reward"><b>هدیهٔ شما:</b> اگر ۲ نفر با لینک شما ثبت‌نام کنند و ایمیل‌شان را تأیید کنند، قیمت اعضای مؤسس برای شما تضمینی است، حتی اگر بعد از نفر ۲۰۰ ثبت‌نام کرده باشید.</p>
+    </div>
+    <p class="note">نکته: در اینستاگرام هم ما را دنبال کنید: @amtsbruecke</p>
+    <p><a href="./?lang=fa">بازگشت به صفحهٔ TheoriePol</a></p>
+  </div></main>
+</div>
+
+<div data-lang="de">
+  <section class="hero"><div class="wrap">
+    <h1>Danke! <span>Sie stehen auf der Warteliste.</span></h1>
+    <p>Wir haben Ihnen eine Bestätigungs-E-Mail geschickt. Bitte klicken Sie auf den Link darin.</p>
+  </div></section>
+  <main><div class="wrap">
+    <div class="invite" hidden>
+      <h2>Ihre Freunde machen auch bald die Theorieprüfung?</h2>
+      <p>Dieser Link gehört nur Ihnen:</p>
+      <div class="link"></div>
+      <div class="btns">
+        <button type="button" class="copy" data-done="Kopiert ✓">Link kopieren</button>
+        <a class="wa" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="tg" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <p class="reward"><b>Ihr Vorteil:</b> Wenn sich 2 Personen über Ihren Link eintragen und ihre E-Mail bestätigen, ist Ihnen der Gründerpreis sicher, auch wenn Sie nach Platz 200 kamen.</p>
+    </div>
+    <p class="note">Tipp: Folgen Sie uns auf Instagram: @amtsbruecke</p>
+    <p><a href="./?lang=de">Zurück zu TheoriePol</a></p>
+  </div></main>
+</div>
+
+<div data-lang="en">
+  <section class="hero"><div class="wrap">
+    <h1>Thank you! <span>You are on the waiting list.</span></h1>
+    <p>We sent you a confirmation email. Please click the link inside it.</p>
+  </div></section>
+  <main><div class="wrap">
+    <div class="invite" hidden>
+      <h2>Friends with a theory test coming up?</h2>
+      <p>This link is yours alone:</p>
+      <div class="link"></div>
+      <div class="btns">
+        <button type="button" class="copy" data-done="Copied ✓">Copy link</button>
+        <a class="wa" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="tg" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <p class="reward"><b>Your reward:</b> if 2 people join through your link and confirm their email, the founding price is guaranteed for you, even if you joined after number 200.</p>
+    </div>
+    <p class="note">Tip: follow us on Instagram: @amtsbruecke</p>
+    <p><a href="./?lang=en">Back to TheoriePol</a></p>
+  </div></main>
+</div>
+
+<footer><div class="wrap" dir="ltr" lang="de"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a> · © 2026 TheoriePol · Alle Rechte vorbehalten</div></footer>
+<script>
+// Builds the personal invite link from the random respondent id that the form tool adds (?id=).
+// The id is not an email or a name. Nothing is stored in the browser or sent anywhere.
+(function () {
+  const id = (new URLSearchParams(location.search).get('id') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 30);
+  if (!id) return;
+  const base = 'https://theoriepol.github.io/warteliste/theoriepol/';
+  const msg = {
+    fa: 'من در فهرست انتظار TheoriePol ثبت‌نام کردم: اپی که آلمانیِ سؤال‌های آزمون تئوری رانندگی را به فارسی توضیح می‌دهد. ثبت‌نام رایگان است و ۲۰۰ نفر اول قیمت مؤسس می‌گیرند:',
+    de: 'Ich stehe auf der Warteliste von TheoriePol: eine App, die das Deutsch der Theorieprüfungsfragen auf Persisch erklärt. Kostenlos eintragen, die ersten 200 bekommen den Gründerpreis:',
+    en: 'I joined the TheoriePol waiting list: an app that explains the German of the driving theory questions in Persian. Free to join, the first 200 get the founding price:'
+  };
+  document.querySelectorAll('[data-lang]').forEach(block => {
+    const lang = block.dataset.lang;
+    const link = `${base}?lang=${lang}&ref=f-${id.toLowerCase()}`;
+    const box = block.querySelector('.invite');
+    if (!box) return;
+    box.querySelector('.link').textContent = link;
+    box.querySelector('.wa').href = 'https://wa.me/?text=' + encodeURIComponent(msg[lang] + ' ' + link);
+    box.querySelector('.tg').href = 'https://t.me/share/url?url=' + encodeURIComponent(link) + '&text=' + encodeURIComponent(msg[lang]);
+    const btn = box.querySelector('.copy');
+    btn.addEventListener('click', async () => {
+      let ok = false;
+      try { await navigator.clipboard.writeText(link); ok = true; } catch (e) {
+        const r = document.createRange(); r.selectNodeContents(box.querySelector('.link'));
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+        try { ok = document.execCommand('copy'); } catch (e2) { ok = false; }
+      }
+      if (ok) { const old = btn.textContent; btn.textContent = btn.dataset.done; setTimeout(() => { btn.textContent = old; }, 2000); }
+    });
+    box.hidden = false;
+  });
+})();
+</script>
+<script src="../lang.js?v=3"></script>
+</body>
+</html>

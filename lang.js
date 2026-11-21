@@ -18,10 +18,9 @@
 
   // Referral code: ?ref=name on this page is passed on to the Tally form links,
   // so sign-ups can be counted per partner. Only letters, digits, - and _ are kept.
-  let ref = (new URLSearchParams(location.search).get('ref') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 30);
-  try {
-    if (ref) localStorage.setItem('ref', ref); else ref = localStorage.getItem('ref') || '';
-  } catch (e) { /* storage may be blocked */ }
+  // Not stored in the browser (no consent needed under § 25 TDDDG); it only travels with the link.
+  try { localStorage.removeItem('ref'); } catch (e) { /* storage may be blocked */ }
+  const ref = (new URLSearchParams(location.search).get('ref') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
   if (ref) {
     document.querySelectorAll('a[href^="https://tally.so/r/"]').forEach(a => {
       const u = new URL(a.href);
