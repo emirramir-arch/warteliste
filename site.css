@@ -1,7 +1,16 @@
 :root { --bg: #0d1b1e; --ink: #17202a; --muted: #4b5b58; --green: #19c37d; --dark-green: #0d8f57; --card: #f4f8f6; --line: #dfe8e4; }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: "Segoe UI", Tahoma, Arial, sans-serif; color: var(--ink); background: #fff; line-height: 1.55; }
-[dir="rtl"] body, [dir="rtl"] { font-family: Tahoma, "Segoe UI", Arial, sans-serif; }
+@font-face { font-family: "Vazirmatn"; src: url("fonts/Vazirmatn.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+[dir="rtl"] body, [dir="rtl"] { font-family: Vazirmatn, Tahoma, "Segoe UI", Arial, sans-serif; }
+a:focus-visible, button:focus-visible { outline: 3px solid #ffd166; outline-offset: 3px; }
+.example { background: #fff; border: 2px solid var(--green); border-radius: 14px; padding: 18px; margin: 0 0 28px; }
+.example .q { font-family: "Segoe UI", Arial, sans-serif; direction: ltr; text-align: left; font-size: 19px; font-weight: 700; margin: 6px 0 12px; }
+.example mark { background: #ffe9a8; color: inherit; padding: 0 4px; border-radius: 4px; }
+.example ul { margin: 0; padding-inline-start: 20px; }
+.example li { margin: 4px 0; }
+.example .label { font-size: 13px; font-weight: 800; color: var(--dark-green); text-transform: uppercase; letter-spacing: .04em; }
+footer a.src { white-space: nowrap; }
 .top { background: var(--bg); color: #fff; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .brand { font-weight: 800; font-size: 20px; letter-spacing: .01em; }
 .brand small { font-weight: 400; color: #8fa6a2; font-size: 12px; margin-inline-start: 8px; }
